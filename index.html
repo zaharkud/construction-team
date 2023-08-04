@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -12,9 +13,9 @@
       <div class="container">
         <div class="header__container">
           <nav class="header__left"> 
-            <div class="logo">
+            <a href="#" class="header__logo">
               <img src="img/logo.png" alt="Спектр Ремонт">
-            </div>
+            </a>
             <ul class="top-menu">
               <li><a href="#" class="top-menu__link">Услуги</a></li>
               <li><a href="#" class="top-menu__link">Прайс-лист</a></li>
@@ -23,8 +24,10 @@
             </ul>
           </nav>
           <div class="header__right">
-            <span>+ 7 (910) 663-31-90</span>
+            <img src="img/icons/common/common__phone.svg" alt="" class="header__tel-icon">
+            <p class="header__tel"><span class="deco-yellow">+</span> 7 <span class="deco-yellow">(</span>910<span class="deco-yellow">)</span> 663<span class="deco-yellow">-</span>31<span class="deco-yellow">-</span>90</p>
           </div>
+          <div class="burger-menu"></div>
         </div>
       </div>
     </header>
@@ -33,16 +36,16 @@
         <div class="promo__container">
           <div class="promo__info">
             <h1 class="promo__title">
-              Отделочные работы в <span>Угличе</span>
+              Отделочные работы и ремонт <br/> в <span class="deco-yellow">Угличе</span>
             </h1>
             <a href="#" class="promo__btn btn">ПОДРОБНЕЕ</a>
           </div>
           <div class="promo__slider slider">
             <div class="slider__content">
-              <div class="slider__image-1">
+              <div class="slider__image">
                 <img src="img/slider/slider__01.jpg" alt="Отделочные работы">
               </div>
-              <div class="slider__image-2">
+              <div class="slider__image">
                 <img src="img/slider/slider__02.jpg" alt="Отделочные работы">
               </div>
             </div>
@@ -55,12 +58,12 @@
         </div>
       </div>
     </section>
-     <section class="advantages">
+    <section class="advantages">
       <div class="container">
         <div class="advantages__container">
           <article class="advantage">
             <div class="advantage__img">
-              <img src="img/icons/general-advt/general-advt__desing-help.png" alt="">
+              <img src="img/icons/general-advt/general-advt__desing-help.svg" alt="">
             </div>
             <p class="advantage__descr">
               Помощь с дизайном
@@ -68,7 +71,7 @@
           </article>
           <article class="advantage">
             <div class="advantage__img">
-              <img src="img/icons/general-advt/general-advt__materials.png" alt="">
+              <img src="img/icons/general-advt/general-advt__materials.svg" alt="">
             </div>
             <p class="advantage__descr">
               Подбор материалов
@@ -76,7 +79,7 @@
           </article>
           <article class="advantage">
             <div class="advantage__img">
-              <img src="img/icons/general-advt/general-advt__assurance.png" alt="">
+              <img src="img/icons/general-advt/general-advt__assurance.svg" alt="">
             </div>
             <p class="advantage__descr">
               Гарантия на работу
@@ -84,7 +87,7 @@
           </article>
           <article class="advantage">
             <div class="advantage__img">
-              <img src="img/icons/general-advt/general-advt__price.png" alt="">
+              <img src="img/icons/general-advt/general-advt__price.svg" alt="">
             </div>
             <p class="advantage__descr">
               Выгодная стоимость
@@ -92,23 +95,29 @@
           </article>
         </div>
       </div>
-     </section>
-     <section class="services">
+    </section>
+    <section class="services">
       <div class="container">
         <div class="services__container">
           <h2 class="services__title section-title">НАШИ УСЛУГИ</h2>
           <div class="services__cards">
-            <article class="service-card">
+            <article class="service-card service-card--on-click">
               <div class="service-card__img">
                 <img src="img/services/services__flat-renov.jpg" alt="Ремонт квартиры">
               </div>
               <div class="service-card__content">
-                <h3 class="service-card__title elem-title">
-                  Ремонт квартиры
-                </h3>
-                <p class="service-card__descr">Передача сигнала может осуществляться по кабелю и по радиоканалу</p>
-                <p class="service-card__descr">Передача сигнала может осуществляться по кабелю и по радиоканалу</p>
-              </div>
+                <div class="service-card__content-top">
+                  <h3 class="service-card__title elem-title">
+                    Ремонт квартиры
+                  </h3>
+                  <p class="service-card__descr">Передача сигнала может осуществляться по кабелю и по радиоканалу</p>
+                  <p class="service-card__descr">Передача сигнала может осуществляться по кабелю и по радиоканалу</p>
+                </div>
+                <div class="service-card__content-bottom">
+                  <div class="service-card__close-btn">
+                  </div>
+                </div>
+                </div>   
             </article>
             <article class="service-card">
               <div class="service-card__img">
@@ -171,10 +180,11 @@
               </div>
             </article>
           </div>
+          <button class="services__btn btn">ВСЕ УСЛУГИ</button>
         </div>
       </div>
-     </section>
-     <section class="price-list">
+    </section>
+    <section class="price-list">
       <div class="container">
         <div class="price-list__container">
           <h2 class="price-list__title section-title section-title--light">
@@ -191,44 +201,93 @@
               </ul>
             </nav>
             <div class="price-list__items">
-              <table class="price-list__tabel">
-                <tr>
-                  <td>Вид работы</td>
-                  <td>Ед. изм.</td>
-                  <td>Цена</td>
-                </tr>
-                <tr>
-                  <td>Укладка ламината</td>
-                  <td>м2</td>
-                  <td>250 РУБ</td>
-                </tr>
-              </table>
+              <div class="pl-table">
+                <article class="pl-table__row pl-table__row--top">
+                  <p>Вид работы</p>
+                  <p>Ед. изм.</p>
+                  <p>Цена</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Укладка ламината</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Укладка ламината</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Укладка ламината sdwqdwd sdewdwd sdwdwd</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
       </div>
-     </section>
-     <section class="about-us">
+    </section>
+    <section class="about-us">
       <div class="container">
         <div class="about-us__container">
           <div class="about-us__top">
-            <div class="about-us__info">
+            <div class="about-us__left">
               <h2 class="about-us__title section-title">О НАС</h2>
-              <p class="about-us__descr">
-              Спектр - это более 20 лет на рынке строительных материалов и свыше 10 лет опыта работы в отделочных работах.
+              <div class="about-us__info">
+                <p class="about-us__descr">
+                Спектр - это более 20 лет на рынке строительных материалов и свыше 10 лет опыта работы в отделочных работах.
+                </p>
+                <p class="about-us__descr">
+                Системы видеонаблюдения пользуются популярностью среди систем безопасности и в настоящее время устанавливаются не только на таких крупных 
               </p>
-              <p class="about-us__descr">
-              Системы видеонаблюдения пользуются популярностью среди систем безопасности и в настоящее время устанавливаются не только на таких крупных 
-            </p>
+              </div>
+              <div class="about-us__steps">
+                <div class="step">
+                  <div class="step__top">
+                    <div class="step__num">
+                      01
+                    </div>
+                    <div class="step__line"></div>
+                  </div>
+                  <p class="step__descr">
+                    Бесплатный выезд специалиста для оценки работ
+                  </p>
+                </div>
+                <div class="step">
+                  <div class="step__top">
+                    <div class="step__num">
+                      02
+                    </div>
+                    <div class="step__line"></div>
+                  </div>
+                  <p class="step__descr">
+                    Обсуждение и солгласование нюансов
+                  </p>
+                </div>
+                <div class="step">
+                  <div class="step__top">
+                    <div class="step__num">
+                      03
+                    </div>
+                    <div class="step__line"></div>
+                  </div>
+                  <p class="step__descr">
+                    Начало выполнения в оговоренные сроки
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="about-us__img">
-              <img src="img/about-us/about-us__building.png" alt="Магазин Спектр">
+            <div class="about-us__right">
+              <div class="about-us__img">
+                <img src="img/about-us/about-us__building.png" alt="Магазин Спектр">
+              </div>
             </div>
           </div>
           <div class="about-us__bottom">
             <article class="advantage-au">
               <div class="advantage-au__img">
-                <img src="img/icons/about-us-advt/about-us-advt__experience.png" alt="">
+                <img src="img/icons/about-us-advt/about-us-advt__experience.svg" alt="">
               </div>
               <p class="advantage-au__descr">
                 Более 10 лет опыта в отделке
@@ -236,7 +295,7 @@
             </article>
             <article class="advantage-au">
               <div class="advantage-au__img">
-                <img src="img/icons/about-us-advt/about-us-advt__education.png" alt="">
+                <img src="img/icons/about-us-advt/about-us-advt__education.svg" alt="">
               </div>
               <p class="advantage-au__descr">
                 Специалисты с проф. образованием
@@ -244,7 +303,7 @@
             </article>
             <article class="advantage-au">
               <div class="advantage-au__img">
-                <img src="img/icons/about-us-advt/about-us-advt__tools.png" alt="">
+                <img src="img/icons/about-us-advt/about-us-advt__tools.svg" alt="">
               </div>
               <p class="advantage-au__descr">
                 Весь набор инструмента
@@ -252,7 +311,7 @@
             </article>
             <article class="advantage-au">
               <div class="advantage-au__img">
-                <img src="img/icons/about-us-advt/about-us-advt__reviews.png" alt="">
+                <img src="img/icons/about-us-advt/about-us-advt__reviews.svg" alt="">
               </div>
               <p class="advantage-au__descr">
                 Положительные отзывы клиентов
@@ -261,8 +320,8 @@
           </div>
         </div>
       </div>
-     </section>
-     <section class="portfolio">
+    </section>
+    <section class="portfolio">
       <div class="container">
         <div class="portfolio__container">
           <h2 class="portfolio__title section-title">
@@ -274,15 +333,15 @@
                 <img src="img/services/services__bathroom-renov.jpg" alt="">
               </div>
               <div class="accent-pr__nav slider-nav">
-                <button class="slider-btn slider-btn--active"></button>
-                <button class="slider-btn"></button>
-                <button class="slider-btn"></button>
+                <button class="slider-btn slider-btn--dark slider-btn--active-dark"></button>
+                <button class="slider-btn slider-btn--dark"></button>
+                <button class="slider-btn slider-btn--dark"></button>
               </div>
               <h3 class="accent-pr__title">
                 Ремонт квартиры в Солнечном
               </h3>
               <p class="accent-pr__descr">
-                При емо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
+                Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
               </p>
             </div>
             <div class="portfolio__promo-project promo-pr">
@@ -293,16 +352,97 @@
                 Ремонт квартиры в Солнечном
               </h4>
               <p class="promo-pr__descr">
-                При емо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
+                Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
               </p>
             </div>
-            <button class="portfolio__next-btn">
-
-            </button>
+            <div class="portfolio__next">
+              <button class="portfolio__next-btn">
+                <div class="portfolio__next-arrow"></div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-     </section>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__container">
+          <div class="contacts__left">
+            <p class="contacts__first-line">Появились вопросы?</p>
+            <p class="contacts__second-line">
+              Напишите или позвоните
+            </p>
+          </div>
+          <div class="contacts__right">
+            <a href="#" class="contacts__tel">
+              + 7 (910) 663-31-90
+            </a>
+            <div class="contacts__social social">
+              <a href="#" class="social__icon">
+                <img src="img/icons/social/social__telegram.svg" alt="Телеграм">
+              </a>
+              <a href="#" class="social__icon">
+                <img src="img/icons/social/social__whatsapp.svg" alt="WhatsApp">
+              </a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__left">
+            <div class="footer__left-top">
+              <a href="#" class="footer__logo">
+                <img src="img/logo.png" alt="Спектр - Ремонт">
+              </a>
+              <p class="footer__descr">
+                Строительные и отделочные работы в городе Углич и Угличском районе:
+              </p>
+              <a class="footer__callback-btn btn">
+                ЗАКАЗАТЬ ЗВОНОК
+              </a>
+              <nav class="footer__menu">
+                <ul class="footer-menu">
+                  <li><a href="#" class="footer-menu__link">Услуги</a></li>
+                  <li><a href="#" class="footer-menu__link">Прайс-лист</a></li>
+                  <li><a href="#" class="footer-menu__link">О нас</a></li>
+                  <li><a href="#" class="footer-menu__link">Портфолио</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__left-bottom">
+              <p class="footer__warning">
+                Информация на сайте носит справочный характер и не является публичной офертой
+              </p>
+              <div class="footer__copyright">
+                <span class="deco-yellow">©</span> Спектр, <span class="deco-yellow">2023</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__map">
+              <img src="img/map.png" alt="">
+            </div>
+            <p class="footer__address">
+              г. Углич, Рыбинское шоссе 20А
+            </p>
+            <div class="footer__working-hours">
+              <p>
+                Понедельник - пятница:  <span class="deco-yellow">9:00-19:00</span>
+              </p>
+              <p>
+                Суббота - воскресенье:   <span class="deco-yellow">9:00-17:00</span>
+              </p>
+            </div>
+            <p class="footer__phone">
+              <span class="deco-yellow">+</span> 7 <span class="deco-yellow">(</span>910<span class="deco-yellow">)</span> 663<span class="deco-yellow">-</span>31<span class="deco-yellow">-</span>90
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

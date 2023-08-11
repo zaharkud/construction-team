@@ -430,7 +430,7 @@ body {
     &:nth-of-type(n + 5) {
       display: none;
     }
-    &:nth-of-type(4) {
+    &--last {
       &::after {
         content: "";
         position: absolute;
@@ -1060,6 +1060,10 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   row-gap: 20px;
+
+  &__map {
+    max-height: 300px;
+  }
 
   &__link {
     color: white;

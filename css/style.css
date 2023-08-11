@@ -529,7 +529,7 @@ body {
   .service-card:nth-of-type(n + 5) {
     display: none;
   }
-  .service-card:nth-of-type(4)::after {
+  .service-card--last::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1145,6 +1145,9 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   row-gap: 20px;
+}
+.footer-menu__map {
+  max-height: 300px;
 }
 .footer-menu__link {
   color: white;

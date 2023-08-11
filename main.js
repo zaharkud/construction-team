@@ -2,6 +2,9 @@ let serviceCardTitles = document.querySelectorAll('.service-card__title');
 let serviceCardCloseBtns = document.querySelectorAll('.service-card__close-btn');
 let serviceCards = document.querySelectorAll('.service-card');
 
+let showServicesBtn = document.querySelector('.services__btn');
+showServicesBtn.addEventListener('click', showServicesHandler);
+
 //Для слайдера с проектами
 let porfolioProjects = document.querySelectorAll('.pf-project');
 let nextProjectBtn = document.querySelector('.portfolio__next-btn');
@@ -19,7 +22,7 @@ projectSliderBtnsEventCreator(projectSliderBtns);
 let promoSliderBtns = document.querySelectorAll('.promo .slider-btn');
 promoSliderBtnsEventCreator(promoSliderBtns);
 
-nextProjectBtn.addEventListener('click', () => nextProjectBtnHandler())
+nextProjectBtn.addEventListener('click', () => nextProjectBtnHandler());
 
 for (let i = 0; i < priceListCategoryBtns.length; i++) {
   priceListCategoryBtns[i].addEventListener('click', () => priceListTableHandler(i));
@@ -122,3 +125,25 @@ function promoSliderBtnsEventCreator(promoSliderBtnsArr) {
     promoSliderBtnsArr[i].addEventListener('click', () => doubleSliderHandler(i, 'slider__image', 'promo__slider', promoSliderBtns));
   }
 }
+
+function showServicesHandler() {
+  for (i = 0; i < serviceCards.length; i++) {
+    serviceCards[i].style.display = 'flex';
+  }
+  showServicesBtn.style.display = 'none';
+  serviceCards[3].classList.remove('service-card--last');
+}
+
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+};

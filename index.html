@@ -24,8 +24,8 @@
             </ul>
           </nav>
           <div class="header__right">
-            <img src="img/icons/common/common__phone.svg" alt="" class="header__tel-icon">
-            <p class="header__tel"><span class="deco-yellow">+</span> 7 <span class="deco-yellow">(</span>910<span class="deco-yellow">)</span> 663<span class="deco-yellow">-</span>31<span class="deco-yellow">-</span>90</p>
+            <a href="tel:89106633190"><img src="img/icons/common/common__phone.svg" alt="" class="header__tel-icon"></a>
+            <a href="tel:89106633190" class="header__tel"><span class="deco-yellow">+</span> 7 <span class="deco-yellow">(</span>910<span class="deco-yellow">)</span> 663<span class="deco-yellow">-</span>31<span class="deco-yellow">-</span>90</a>
           </div>
           <div class="burger-menu"></div>
         </div>
@@ -42,11 +42,23 @@
           </div>
           <div class="promo__slider slider">
             <div class="slider__content">
-              <div class="slider__image">
+              <div class="slider__image slider__image--active">
                 <img src="img/slider/slider__01.jpg" alt="Отделочные работы">
               </div>
-              <div class="slider__image">
+              <div class="slider__image slider__image--active">
                 <img src="img/slider/slider__02.jpg" alt="Отделочные работы">
+              </div>
+              <div class="slider__image">
+                <img src="img/slider/slider__03.jpg" alt="Отделочные работы">
+              </div>
+              <div class="slider__image">
+                <img src="img/slider/slider__04.jpg" alt="Отделочные работы">
+              </div>
+              <div class="slider__image">
+                <img src="img/slider/slider__05.jpg" alt="Отделочные работы">
+              </div>
+              <div class="slider__image">
+                <img src="img/slider/slider__06.jpg" alt="Отделочные работы">
               </div>
             </div>
             <div class="slider__nav slider-nav">
@@ -223,35 +235,123 @@
           <div class="price-list__content">
             <nav class="price-list__nav">
               <ul class="pl-menu">
-                <li><a href="#" class="pl-menu__link pl-menu__link--active">ПОЛЫ</a></li>
-                <li><a href="#" class="pl-menu__link">СТЕНЫ</a></li>
-                <li><a href="#" class="pl-menu__link">ПОТОЛКИ</a></li>
-                <li><a href="#" class="pl-menu__link">САНТЕХНИКА</a></li>
-                <li><a href="#" class="pl-menu__link">САНТЕХНИКА</a></li>
+                <li><a class="pl-menu__link pl-menu__link--active">ПОЛЫ</a></li>
+                <li><a class="pl-menu__link">СТЕНЫ</a></li>
+                <li><a class="pl-menu__link">ПОТОЛКИ</a></li>
+                <li><a class="pl-menu__link">САНТЕХНИКА</a></li>
+                <li><a class="pl-menu__link">ЭЛЕКТРИКА</a></li>
               </ul>
             </nav>
             <div class="price-list__items">
+              <div class="pl-table pl-table--active">
+                <article class="pl-table__row pl-table__row--top">
+                  <p>Вид работы</p>
+                  <p>Ед. изм.</p>
+                  <p>Цена, от</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Укладка ламината</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Постил линолеума</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Установка плинтусов</p>
+                  <p>м</p>
+                  <p>50 РУБ</p>
+                </article>
+              </div>
               <div class="pl-table">
                 <article class="pl-table__row pl-table__row--top">
                   <p>Вид работы</p>
                   <p>Ед. изм.</p>
-                  <p>Цена</p>
+                  <p>Цена, от</p>
                 </article>
                 <article class="pl-table__row">
-                  <p>Укладка ламината</p>
+                  <p>Поклейка обоев</p>
                   <p>м2</p>
                   <p>250 РУБ</p>
                 </article>
                 <article class="pl-table__row">
-                  <p>Укладка ламината</p>
+                  <p>Штукатурка</p>
                   <p>м2</p>
                   <p>250 РУБ</p>
                 </article>
                 <article class="pl-table__row">
-                  <p>Укладка ламината sdwqdwd sdewdwd sdwdwd</p>
+                  <p>Панели ПВХ</p>
                   <p>м2</p>
                   <p>250 РУБ</p>
                 </article>
+              </div>
+              <div class="pl-table">
+                <article class="pl-table__row pl-table__row--top">
+                  <p>Вид работы</p>
+                  <p>Ед. изм.</p>
+                  <p>Цена, от</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Потолочные плинтуса</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Потолочная плитка</p>
+                  <p>м2</p>
+                  <p>250 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Другие виды работ...</p>
+                  <p></p>
+                  <p></p>
+                </article>
+              </div>
+              <div class="pl-table">
+                <article class="pl-table__row pl-table__row--top">
+                  <p>Вид работы</p>
+                  <p>Ед. изм.</p>
+                  <p>Цена, от</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Установкая смесителя</p>
+                  <p>шт</p>
+                  <p>700 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Установкая унитаза</p>
+                  <p>шт</p>
+                  <p>1500 РУБ</p>
+                </article>
+                <article class="pl-table__row">
+                  <p>Установка душевой кабины</p>
+                  <p>шт</p>
+                  <p>5000 РУБ</p>
+                </article>
+                </div>
+                <div class="pl-table">
+                  <article class="pl-table__row pl-table__row--top">
+                    <p>Вид работы</p>
+                    <p>Ед. изм.</p>
+                    <p>Цена, от</p>
+                  </article>
+                  <article class="pl-table__row">
+                    <p>Установкая светильника</p>
+                    <p>шт</p>
+                    <p>600 РУБ</p>
+                  </article>
+                  <article class="pl-table__row">
+                    <p>Монтаж розетки</p>
+                    <p>шт</p>
+                    <p>300 РУБ</p>
+                  </article>
+                  <article class="pl-table__row">
+                    <p>Другие виды работ...</p>
+                    <p></p>
+                    <p></p>
+                  </article>
               </div>
             </div>
           </div>
@@ -358,30 +458,77 @@
             ВЫПОЛНЕННЫЕ ПРОЕКТЫ
           </h2>
           <div class="portfolio__content">
-            <div class="portfolio__accent-project accent-pr">
-              <div class="accent-pr__img">
-                <img src="img/services/services__bathroom-renov.jpg" alt="">
+            <div class="pf-project pf-project--accent">
+              <div class="pf-project__slider">
+                <div class="pf-project__img">
+                  <img class="pf-project__slider-img pf-project__slider-img--active" src="img/services/services__bathroom-renov.jpg" alt="">
+                  <img class="pf-project__slider-img" src="img/services/services__kitchen-renov.jpg" alt="">
+                  <img class="pf-project__slider-img" src="img/services/services__flat-renov.jpg" alt="">
+                </div>
+                <div class="pf-project__nav slider-nav slider-nav--dark">
+                  <button class="slider-btn slider-btn--active"></button>
+                  <button class="slider-btn"></button>
+                  <button class="slider-btn"></button>
+                </div>
               </div>
-              <div class="accent-pr__nav slider-nav">
-                <button class="slider-btn slider-btn--dark slider-btn--active-dark"></button>
-                <button class="slider-btn slider-btn--dark"></button>
-                <button class="slider-btn slider-btn--dark"></button>
-              </div>
-              <h3 class="accent-pr__title">
+              <h3 class="pf-project__title">
                 Ремонт квартиры в Солнечном
               </h3>
-              <p class="accent-pr__descr">
+              <p class="pf-project__descr">
                 Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
               </p>
             </div>
-            <div class="portfolio__promo-project promo-pr">
-              <div class="promo-pr__img">
-                <img src="img/services/services__bathroom-renov.jpg" alt="">
+            <div class="pf-project pf-project--promo">
+              <div class="pf-project__img">
+                <img class="pf-project__slider-img pf-project__slider-img--active" src="img/services/services__kitchen-renov.jpg" alt="">
+                <img class="pf-project__slider-img " src="img/services/services__bathroom-renov.jpg" alt="">
+                <img class="pf-project__slider-img" src="img/services/services__flat-renov.jpg" alt="">
               </div>
-              <h4 class="promo-pr__title">
-                Ремонт квартиры в Солнечном
-              </h4>
-              <p class="promo-pr__descr">
+              <div class="pf-project__nav slider-nav slider-nav--dark">
+                <button class="slider-btn slider-btn--active"></button>
+                <button class="slider-btn"></button>
+                <button class="slider-btn"></button>
+              </div>
+              <h3 class="pf-project__title">
+                Ремонт квартиры в Цветочном
+              </h3>
+              <p class="pf-project__descr">
+                Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
+              </p>
+            </div>
+            <div class="pf-project">
+              <div class="pf-project__img">
+                <img class="pf-project__slider-img pf-project__slider-img--active" src="img/services/services__bathroom-renov.jpg" alt="">
+                <img class="pf-project__slider-img" src="img/services/services__kitchen-renov.jpg" alt="">
+                <img class="pf-project__slider-img" src="img/services/services__flat-renov.jpg" alt="">
+              </div>
+              <div class="pf-project__nav slider-nav slider-nav--dark">
+                <button class="slider-btn slider-btn--active"></button>
+                <button class="slider-btn"></button>
+                <button class="slider-btn"></button>
+              </div>
+              <h3 class="pf-project__title">
+                Ремонт квартиры на Часовом
+              </h3>
+              <p class="pf-project__descr">
+                Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
+              </p>
+            </div>
+            <div class="pf-project">
+              <div class="pf-project__img">
+                <img class="pf-project__slider-img" src="img/services/services__bathroom-renov.jpg" alt="">
+                <img class="pf-project__slider-img" src="img/services/services__kitchen-renov.jpg" alt="">
+                <img class="pf-project__slider-img pf-project__slider-img--active" src="img/services/services__flat-renov.jpg" alt="">
+              </div>
+              <div class="pf-project__nav slider-nav slider-nav--dark">
+                <button class="slider-btn slider-btn--active"></button>
+                <button class="slider-btn"></button>
+                <button class="slider-btn"></button>
+              </div>
+              <h3 class="pf-project__title">
+                Ремонт квартиры в Мирном
+              </h3>
+              <p class="pf-project__descr">
                 Приемо-контрольный прибор, приняв тревожный сигнал датчика, проводит оповещение заранее запрограммированным способом.
               </p>
             </div>
@@ -404,7 +551,7 @@
             </p>
           </div>
           <div class="contacts__right">
-            <a href="#" class="contacts__tel">
+            <a href="tel:89106633190" class="contacts__tel">
               + 7 (910) 663-31-90
             </a>
             <div class="contacts__social social">
@@ -466,9 +613,9 @@
                 Суббота - воскресенье:   <span class="deco-yellow">9:00-17:00</span>
               </p>
             </div>
-            <p class="footer__phone">
+            <a href="tel:89106633190" class="footer__phone">
               <span class="deco-yellow">+</span> 7 <span class="deco-yellow">(</span>910<span class="deco-yellow">)</span> 663<span class="deco-yellow">-</span>31<span class="deco-yellow">-</span>90
-            </p>
+            </a>
           </div>
         </div>
       </div>

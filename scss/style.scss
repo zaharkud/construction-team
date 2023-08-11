@@ -36,6 +36,7 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   transition: background-color 0.3s;
+  cursor: pointer;
 
   &:hover {
     background-color: $accent-yellow-hover;
@@ -90,6 +91,7 @@ body {
   }
   &__tel {
     font-size: 18px;
+    color: white;
   }
   &__tel-icon {
     height: 25px;
@@ -226,6 +228,7 @@ body {
 .slider {
   &__content {
     display: flex;
+    gap: 35px;
     height: 100%;
   }
   &__nav {
@@ -233,9 +236,10 @@ body {
   }
   &__image {
     max-width: 250px;
+    display: none;
 
-    &:not(:last-of-type) {
-      margin-right: 35px;
+    &--active {
+      display: block;
     }
     & img {
       object-fit: cover;
@@ -253,21 +257,22 @@ body {
   & :not(:last-child) {
     margin-right: 10px;
   }
+  &--dark {
+    .slider-btn {
+      background-color: $accent-light-grey;
+    }
+    .slider-btn--active {
+      background-color: $main-blue;
+    }
+  }
 }
 .slider-btn {
   background-color: white;
   height: 10px;
   width: 10px;
   border-radius: 50%;
-
-  &--dark {
-    background-color: $accent-light-grey;
-  }
   &--active {
     background-color: $accent-yellow;
-  }
-  &--active-dark {
-    background-color: $main-blue;
   }
 }
 
@@ -376,6 +381,7 @@ body {
     justify-content: center;
     padding: 30px;
     background-color: $main-blue-opacity;
+    transition: all 0.1s linear 0s;
   }
   &__title {
     width: 80%;
@@ -398,6 +404,7 @@ body {
     width: 30px;
     height: 30px;
     cursor: pointer;
+
     &::before {
       content: "";
       position: absolute;
@@ -454,6 +461,7 @@ body {
   .service-card__content {
     justify-content: space-between;
     height: 100%;
+    transition: all 0.2s linear 0s;
   }
   .service-card__content-top {
     display: flex;
@@ -477,31 +485,66 @@ body {
   background-color: $main-blue;
   &__nav {
     margin-top: 50px;
-    background-color: $accent-yellow;
-    padding: 22px 35px;
   }
   &__items {
     margin-top: 28px;
     background-color: white;
     padding: 35px;
   }
+  & .pl-table {
+    display: none;
+  }
+  & .pl-table.pl-table--active {
+    display: block;
+  }
 }
 .pl-menu {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 60px;
   font-size: 24px;
   text-transform: uppercase;
   overflow-x: scroll;
   overflow-y: hidden;
+  background-color: $accent-yellow;
+  padding: 0 35px;
+  height: 60px;
 
   &__link {
     color: black;
     transition: text-shadow 0.3s;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+
     &:hover {
-      text-shadow:
-        0 0 0.85px #333,
-        0 0 0.85px #333;
+      color: $main-blue;
+    }
+    &:hover::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      height: 10px;
+      width: 100%;
+      background-color: $main-blue;
+    }
+  }
+  &__link--active {
+    position: relative;
+    color: $main-blue;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      height: 10px;
+      width: 100%;
+      background-color: $main-blue;
     }
   }
 }
@@ -738,17 +781,27 @@ body {
     display: flex;
     gap: 5%;
   }
-  &__accent-project {
-    flex: 0 0 45%;
+  &__content .pf-project {
+    display: none;
   }
-  &__promo-project {
+  &__content .pf-project--accent {
+    display: block;
+    flex: 0 0 45%;
+    order: 0;
+    transition: opacity 1s linear 0s;
+  }
+  &__content .pf-project--promo {
+    display: block;
     flex: 0 0 25%;
+    order: 1;
+    opacity: 0.4;
   }
   &__next {
     flex: 0 0 20%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    order: 2;
   }
   &__next-btn {
     width: 70%;
@@ -786,10 +839,10 @@ body {
     }
   }
   @media (max-width: 1000px) {
-    &__promo-project {
+    &__content .pf-project--promo {
       display: none;
     }
-    &__accent-project {
+    &__content .pf-project--accent {
       flex: 0 0 70%;
     }
     &__next {
@@ -815,52 +868,62 @@ body {
     }
   }
 }
-.accent-pr {
-  line-height: 120%;
+.pf-project {
+  &--accent {
+    line-height: 120%;
+    .pf-project__img {
+      height: 380px;
+      margin-bottom: 15px;
+    }
+    .pf-project__img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .pf-project__nav {
+      margin-bottom: 25px;
+    }
+    .pf-project__title {
+      margin-bottom: 12px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+    .pf-project__descr {
+      font-weight: 400;
+    }
+  }
+  &--promo {
+    line-height: 120%;
 
-  &__img {
-    height: 380px;
-    margin-bottom: 10px;
+    .pf-project__img {
+      height: 180px;
+      margin-bottom: 20px;
+    }
+    .pf-project__img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .pf-project__title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .pf-project__descr {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 110%;
+    }
+    .pf-project__nav {
+      display: none;
+    }
   }
-  &__img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  &__nav {
-    margin-bottom: 25px;
-  }
-  &__title {
-    margin-bottom: 12px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 100%;
-  }
-  &__descr {
-    font-weight: 400;
-  }
-}
-.promo-pr {
-  line-height: 120%;
-
-  &__img {
-    height: 180px;
-    margin-bottom: 20px;
-  }
-  &__img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  &__title {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  &__descr {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 110%;
+  &__slider-img {
+    display: none;
+    &--active {
+      display: block;
+    }
   }
 }
 
@@ -974,6 +1037,7 @@ body {
     margin-bottom: 30px;
   }
   &__phone {
+    color: white;
     padding-left: 35px;
     background: url("/img/icons/common/common__phone.svg") 0 center / 20px 20px no-repeat;
   }

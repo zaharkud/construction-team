@@ -14,6 +14,11 @@ let projectTumbler = 0;
 let priceListTables = document.querySelectorAll('.pl-table');
 let priceListCategoryBtns = document.querySelectorAll('.pl-menu__link');
 
+document.querySelector('.burger-menu').addEventListener('click', () => {
+  document.querySelector('.top-menu').classList.toggle('top-menu--burger-active');
+  document.querySelector('.burger-menu').classList.toggle('burger-menu--burger-active');
+})
+
 //Собираем кноппки на слайдер с фотографиями для проекта из портфолио
 let projectSliderBtns = document.querySelectorAll('.pf-project--accent .slider-btn');
 projectSliderBtnsEventCreator(projectSliderBtns);

@@ -171,6 +171,10 @@ body {
   font-weight: 700;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .header {
   padding: 45px 0;
   background-color: #1b3764;
@@ -274,6 +278,9 @@ body {
   display: none;
   position: relative;
   z-index: 100;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s;
 }
 .burger-menu span {
   height: 2px;
@@ -284,12 +291,28 @@ body {
   .burger-menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 8px;
   }
 }
 
+.burger-menu--burger-active {
+  gap: 0px;
+  position: relative;
+}
 .burger-menu--burger-active span {
+  position: absolute;
   background-color: rgb(0, 0, 0);
+  transition: all 0.3s;
+}
+.burger-menu--burger-active span:nth-of-type(1) {
+  display: none;
+}
+.burger-menu--burger-active span:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+.burger-menu--burger-active span:nth-of-type(3) {
+  transform: rotate(-45deg);
 }
 
 .promo {

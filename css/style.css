@@ -261,6 +261,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  animation: burgerMenuStart 0.5s forwards;
 }
 .top-menu--burger-active .top-menu__link {
   font-size: 18px;
@@ -274,6 +275,14 @@ body {
   color: #1b3764;
 }
 
+@keyframes burgerMenuStart {
+  from {
+    background-color: #1b3764;
+  }
+  to {
+    background-color: #ffd363;
+  }
+}
 .burger-menu {
   display: none;
   position: relative;
@@ -712,6 +721,9 @@ body {
 .pl-table__row:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
+}
+.pl-table > :last-child {
+  color: #aeafb0;
 }
 .pl-table__row--top {
   color: #aeafb0;

@@ -147,6 +147,9 @@ for (let smoothLink of smoothLinks) {
     e.preventDefault();
     const id = smoothLink.getAttribute('href');
 
+    document.querySelector('.top-menu').classList.remove('top-menu--burger-active');
+    document.querySelector('.burger-menu').classList.remove('burger-menu--burger-active');
+
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
       block: 'start'

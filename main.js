@@ -121,7 +121,7 @@ function doubleSliderHandler(num, sliderImgClass, sliderParentClass, sliderBtns)
 }
 
 function projectSliderBtnsEventCreator(projectSliderBtnsArr) {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < projectSliderBtnsArr.length; i++) {
     projectSliderBtnsArr[i].addEventListener('click', () => simpleSliderHandler(i, 'pf-project__slider-img', 'pf-project--accent', projectSliderBtns));
   }
 }
@@ -149,6 +149,7 @@ for (let smoothLink of smoothLinks) {
 
     document.querySelector('.top-menu').classList.remove('top-menu--burger-active');
     document.querySelector('.burger-menu').classList.remove('burger-menu--burger-active');
+    document.body.classList.remove('overflow-hidden');
 
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
